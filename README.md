@@ -7,6 +7,26 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
+
+
+
+-------------------
+
+[![Build Status](https://travis-ci.org/gordonbanderson/silverstripe-sluggable.svg?branch=master)](https://travis-ci.org/gordonbanderson/silverstripe-sluggable)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/build-status/master)
+[![codecov.io](https://codecov.io/github/gordonbanderson/silverstripe-sluggable/coverage.svg?branch=master)](https://codecov.io/github/gordonbanderson/silverstripe-sluggable?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/COMPOSER/version)](https://packagist.org/packages/COMPOSER)
+[![Latest Unstable Version](https://poser.pugx.org/COMPOSER/v/unstable)](//packagist.org/packages/COMPOSER)
+[![Total Downloads](https://poser.pugx.org/COMPOSER/downloads)](https://packagist.org/packages/COMPOSER)
+[![License](https://poser.pugx.org/COMPOSER/license)](https://packagist.org/packages/COMPOSER)
+[![Monthly Downloads](https://poser.pugx.org/COMPOSER/d/monthly)](https://packagist.org/packages/COMPOSER)
+[![Daily Downloads](https://poser.pugx.org/COMPOSER/d/daily)](https://packagist.org/packages/COMPOSER)
+[![Dependency Status](https://www.versioneye.com/php/COMPOSER_COLON/badge.svg)](https://www.versioneye.com/php/COMPOSER_COLON)
+[![Reference Status](https://www.versioneye.com/php/COMPOSER_COLON/reference_badge.svg?style=flat)](https://www.versioneye.com/php/COMPOSER_COLON/references)
+![codecov.io](https://codecov.io/github/gordonbanderson/silverstripe-sluggable/branch.svg?branch=master)
+
 This module allows the developer to add a field that will be converted to a slug (kebab case) when saved
 
 # Configuration
