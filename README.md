@@ -72,7 +72,6 @@ If you discover any security related issues, please email gordon.b.anderson@gmai
 ## Credits
 
 - [Gordon Anderson][link-author]
-- [All Contributors][link-contributors]
 
 ## License
 
