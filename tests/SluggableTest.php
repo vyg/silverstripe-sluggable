@@ -32,19 +32,16 @@ class SluggableTest extends SapphireTest
     public function testUpperCase()
     {
         $this->assertEquals('this-is-upper-case', $this->getSlug('THIS IS UPPER CASE'));
-
     }
 
     public function textMixedCase()
     {
         $this->assertEquals('this-is-mixed-case', $this->getSlug('THIs-Is-Mixed-case'));
-
     }
 
     public function testEmptyString()
     {
         $this->assertEquals('', $this->getSlug(''));
-
     }
 
     private function getSlug($title)
