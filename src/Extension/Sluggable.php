@@ -7,6 +7,7 @@ namespace Suilven\Sluggable\Extension;
 use SilverStripe\Core\Config\Config_ForClass;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\View\Parsers\URLSegmentFilter;
+use Suilven\Sluggable\Helper\SluggableHelper;
 
 class Sluggable extends DataExtension
 {
@@ -26,10 +27,6 @@ class Sluggable extends DataExtension
     {
         parent::onBeforeWrite();
 
-        // use the standard SilverStripe tool for slugging URLs.  This optionally may have a different transliterator
-        // associated with it
-        $slugger = new URLSegmentFilter();
-
         /** @var Config_ForClass $config */
         $config = $this->owner->config();
 
@@ -39,8 +36,10 @@ class Sluggable extends DataExtension
         /** @var string $fieldValue */
         $fieldValue = $this->owner->$fieldName;
 
+        $helper = new SluggableHelper();
+
         /** @var string $slug */
-        $slug = $slugger->filter($fieldValue);
+        $slug = $helper->getSlug($fieldValue);
 
         // save the slug in the Slug field
         $this->owner->Slug = $slug;
