@@ -1,7 +1,4 @@
 # Sluggable
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-
 [![Build Status](https://travis-ci.org/gordonbanderson/silverstripe-sluggable.svg?branch=master)](https://travis-ci.org/gordonbanderson/silverstripe-sluggable)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/build-status/master)
@@ -83,18 +80,3 @@ If you discover any security related issues, please email gordon.b.anderson@gmai
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/suilven/sluggable.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/suilven/sluggable/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/suilven/sluggable.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/suilven/sluggable.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/suilven/sluggable.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/suilven/sluggable
-[link-travis]: https://travis-ci.org/suilven/sluggable
-[link-scrutinizer]: https://scrutinizer-ci.com/g/suilven/sluggable/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/suilven/sluggable
-[link-downloads]: https://packagist.org/packages/suilven/sluggable
-[link-author]: https://github.com/gordonbanderson
-[link-contributors]: ../../contributors
