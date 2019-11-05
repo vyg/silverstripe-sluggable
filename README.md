@@ -3,12 +3,15 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/silverstripe-sluggable/build-status/master)
 [![codecov.io](https://codecov.io/github/gordonbanderson/silverstripe-sluggable/coverage.svg?branch=master)](https://codecov.io/github/gordonbanderson/silverstripe-sluggable?branch=master)
+
+
 [![Latest Stable Version](https://poser.pugx.org/suilven/sluggable/version)](https://packagist.org/packages/suilven/sluggable)
 [![Latest Unstable Version](https://poser.pugx.org/suilven/sluggable/v/unstable)](//packagist.org/packages/suilven/sluggable)
 [![Total Downloads](https://poser.pugx.org/suilven/sluggable/downloads)](https://packagist.org/packages/suilven/sluggable)
 [![License](https://poser.pugx.org/suilven/sluggable/license)](https://packagist.org/packages/suilven/sluggable)
 [![Monthly Downloads](https://poser.pugx.org/suilven/sluggable/d/monthly)](https://packagist.org/packages/suilven/sluggable)
 [![Daily Downloads](https://poser.pugx.org/suilven/sluggable/d/daily)](https://packagist.org/packages/suilven/sluggable)
+[![composer.lock](https://poser.pugx.org/suilven/sluggable/composerlock)](https://packagist.org/packages/suilven/sluggable)
 
 [![GitHub Code Size](https://img.shields.io/github/languages/code-size/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable)
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable)
