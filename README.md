@@ -14,11 +14,7 @@
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable)
 [![GitHub Activity](https://img.shields.io/github/commit-activity/m/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable)
-
-
 [![GitHub Issues](https://img.shields.io/github/issues/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable/issues)
-
-
 
 ![codecov.io](https://codecov.io/github/gordonbanderson/silverstripe-sluggable/branch.svg?branch=master)
 
