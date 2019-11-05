@@ -11,8 +11,8 @@
 [![Daily Downloads](https://poser.pugx.org/suilven/sluggable/d/daily)](https://packagist.org/packages/suilven/sluggable)
 
 [![GitHub Code Size](https://img.shields.io/github/languages/code-size/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable)
-[![GitHub Repo Size](https://img.shields.io/github/languages/repo-size/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable)
-[![GitHub File Size in Bytes](https://img.shields.io/github/languages/size/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable)
+[![GitHub Repo Size](https://img.shields.io/github/repo-size/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable)
+[![GitHub File Size in Bytes](https://img.shields.io/github/size/gordonbanderson/silverstripe-sluggable)](https://github.com/gordonbanderson/silverstripe-sluggable)
 
 
 ![codecov.io](https://codecov.io/github/gordonbanderson/silverstripe-sluggable/branch.svg?branch=master)
