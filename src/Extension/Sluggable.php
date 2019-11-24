@@ -18,6 +18,13 @@ class Sluggable extends DataExtension
         'Slug' => 'Varchar(255)'
     ];
 
+    private static $indexes = [
+        'SlugIndex' => [
+            'type' => 'unique',
+            'columns' => ['Slug'],
+        ],
+    ];
+
 
     /**
      * Convert the configured field and it's associated value into a slug
