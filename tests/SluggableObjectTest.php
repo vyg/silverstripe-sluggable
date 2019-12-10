@@ -9,8 +9,9 @@ use SilverStripe\Core\Startup\ScheduledFlushDiscoverer;
 use SilverStripe\Dev\SapphireTest;
 use Suilven\Sluggable\Extension\Sluggable;
 use Suilven\Sluggable\Helper\SluggableHelper;
+use Suilven\Sluggable\Tests\Model\SluggestTestObject;
 
-class SluggableTest extends SapphireTest
+class SluggableObjectTest extends SapphireTest
 {
     public static function setUpBeforeClass()
     {
@@ -26,27 +27,29 @@ class SluggableTest extends SapphireTest
 
     public function testLowerCase()
     {
-        $this->assertEquals('this-is-lower-case', $this->getSlug('this is lower case'));
+        $this->assertEquals('this-is-lower-case', $this->getSlugFromDataObject('this is lower case'));
     }
 
     public function testUpperCase()
     {
-        $this->assertEquals('this-is-upper-case', $this->getSlug('THIS IS UPPER CASE'));
+        $this->assertEquals('this-is-upper-case', $this->getSlugFromDataObject('THIS IS UPPER CASE'));
     }
 
     public function textMixedCase()
     {
-        $this->assertEquals('this-is-mixed-case', $this->getSlug('THIs-Is-Mixed-case'));
+        $this->assertEquals('this-is-mixed-case', $this->getSlugFromDataObject('THIs-Is-Mixed-case'));
     }
 
     public function testEmptyString()
     {
-        $this->assertEquals('', $this->getSlug(''));
+        $this->assertEquals('', $this->getSlugFromDataObject(''));
     }
 
-    private function getSlug($title)
+    private function getSlugFromDataObject($title)
     {
-        $helper = new SluggableHelper();
-        return $helper->getSlug($title);
+        $object = new SluggestTestObject();
+        $object->DisplayName = $title;
+        $object->write();
+        return $object->Slug;
     }
 }
