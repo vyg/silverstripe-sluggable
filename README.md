@@ -70,6 +70,7 @@ Assuming the configuration above:
 ``` php
 $club = new Suilven\CricketSite\Model\Club();
 $club->Name = 'GitHub Cricket Club';
+$club->write();
 echo $club->Slug
 ```
 
