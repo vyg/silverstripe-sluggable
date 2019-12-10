@@ -23,9 +23,13 @@
 
 ![codecov.io](https://codecov.io/github/gordonbanderson/silverstripe-sluggable/branch.svg?branch=master)
 
-This module allows the developer to add a field that will be converted to a slug (kebab case) when saved
+This SilverStripe module allows the developer to add a field that will be converted to a slug (kebab case) when saved
 
 # Configuration
+For any given class that needs slugs, the extension `Suilven\Sluggable\Extension\Sluggable` needs added and also
+the name of the field name to slug, under the key `slug`.  The slug is stored in a field called `Slug` on the data object
+after a write is executed.
+
 ```yml
 ---
 Name: cricket-slugs
@@ -46,7 +50,7 @@ Suilven\CricketSite\Model\Player:
 ```bash
 vendor/bin/sake dev/build flush=all
 ```
-Then reload /admin?flush=all
+Then reload the browser, `<your site>/admin?flush=all`
 
 Now when the above models are saved, they will be saved with a slug associated with them.
 
@@ -62,10 +66,15 @@ $ composer require suilven/sluggable
 
 ## Usage
 
+Assuming the configuration above:
 ``` php
-$skeleton = new Suilven\sluggable();
-echo $skeleton->echoPhrase('Hello, League!');
+$club = new Suilven\CricketSite\Model\Club();
+$club->Name = 'GitHub Cricket Club';
+echo $club->Slug
 ```
+
+The value output will be `github-cricket-club`
+
 
 ## Change log
 
