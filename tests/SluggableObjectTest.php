@@ -13,6 +13,10 @@ use Suilven\Sluggable\Tests\Model\SluggestTestObject;
 
 class SluggableObjectTest extends SapphireTest
 {
+    protected static $extra_dataobjects = [
+        SluggestTestObject::class
+    ];
+
     public static function setUpBeforeClass()
     {
         parent::setUpBeforeClass();
