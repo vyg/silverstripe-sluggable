@@ -48,7 +48,22 @@ class Sluggable extends DataExtension
         /** @var string $slug */
         $slug = $helper->getSlug($fieldValue);
 
-        // save the slug in the Slug field
-        $this->owner->Slug = $slug;
+        $i = 0;
+
+        // @todo make this configurable
+        while ($i < 1000) {
+            $suffix = $i == 0 ? '' : '-' . $i;
+            $slugToSave = $slug . $suffix;
+
+            $existing = $this->owner->get()->filter(['Slug' => $slugToSave])->first();
+            if (!$existing) {
+                $this->owner->Slug = $slugToSave;
+                break;
+            }
+
+            $i++;
+        }
+
+
     }
 }

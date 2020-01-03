@@ -17,36 +17,32 @@ class SluggableObjectTest extends SapphireTest
         SluggestTestObject::class
     ];
 
-    public static function setUpBeforeClass()
-    {
-        parent::setUpBeforeClass();
-
-        /**
-         * @todo How does one add an extension during tests?
-        \Page::add_extension(Sluggable::class);
-        $kernel = Injector::inst()->get(Kernel::class);
-        ScheduledFlushDiscoverer::scheduleFlush($kernel);
-         * */
-    }
-
     public function testLowerCase()
     {
         $this->assertEquals('this-is-lower-case', $this->getSlugFromDataObject('this is lower case'));
     }
 
-    public function testUpperCase()
+    public function test_upper_case()
     {
         $this->assertEquals('this-is-upper-case', $this->getSlugFromDataObject('THIS IS UPPER CASE'));
     }
 
-    public function textMixedCase()
+    public function text_mixed_case()
     {
         $this->assertEquals('this-is-mixed-case', $this->getSlugFromDataObject('THIs-Is-Mixed-case'));
     }
 
-    public function testEmptyString()
+    public function test_empty_string()
     {
         $this->assertEquals('', $this->getSlugFromDataObject(''));
+    }
+
+    public function test_duplicate_string()
+    {
+        $this->assertEquals('duplicate', $this->getSlugFromDataObject('Duplicate'));
+        $this->assertEquals('duplicate-1', $this->getSlugFromDataObject('Duplicate'));
+        $this->assertEquals('duplicate-2', $this->getSlugFromDataObject('Duplicate'));
+
     }
 
     private function getSlugFromDataObject($title)

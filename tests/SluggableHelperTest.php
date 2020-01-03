@@ -12,34 +12,23 @@ use Suilven\Sluggable\Helper\SluggableHelper;
 
 class SluggableHelperTest extends SapphireTest
 {
-    public static function setUpBeforeClass()
-    {
-        parent::setUpBeforeClass();
 
-        /**
-         * @todo How does one add an extension during tests?
-        \Page::add_extension(Sluggable::class);
-        $kernel = Injector::inst()->get(Kernel::class);
-        ScheduledFlushDiscoverer::scheduleFlush($kernel);
-         * */
-    }
-
-    public function testLowerCase()
+    public function test_lower_case()
     {
         $this->assertEquals('this-is-lower-case', $this->getSlug('this is lower case'));
     }
 
-    public function testUpperCase()
+    public function test_upper_case()
     {
         $this->assertEquals('this-is-upper-case', $this->getSlug('THIS IS UPPER CASE'));
     }
 
-    public function textMixedCase()
+    public function text_mixed_case()
     {
         $this->assertEquals('this-is-mixed-case', $this->getSlug('THIs-Is-Mixed-case'));
     }
 
-    public function testEmptyString()
+    public function test_empty_string()
     {
         $this->assertEquals('', $this->getSlug(''));
     }

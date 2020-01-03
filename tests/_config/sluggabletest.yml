@@ -1,14 +1,9 @@
 ---
-Name: cricket-slugs
+Name: test-slugs
 ---
 
-Suilven\CricketSite\Model\Club:
+Suilven\Sluggable\Tests\Model\SluggableTestObject:
   extensions:
     - Suilven\Sluggable\Extension\Sluggable
-  slug: Name
-
-Suilven\CricketSite\Model\Team:
-  extensions:
-    - Suilven\Sluggable\Extension\Sluggable
-  slug: Name
+  slug: DisplayName
 
