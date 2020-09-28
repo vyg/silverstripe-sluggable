@@ -39,7 +39,7 @@ class Sluggable extends DataExtension
 
         /** @var string $fieldName */
         $fieldName = $config->get('slug');
-        
+
         /** @var string $fieldValue */
         $fieldValue = $this->owner->$fieldName;
 
@@ -49,8 +49,8 @@ class Sluggable extends DataExtension
         $slug = $helper->getSlug($fieldValue);
 
         $count = $this->owner->get()->filter([$fieldName => $fieldValue])->count();
-
-        if ($count > 1) {
+        
+        if ($count >= 1) {
             $i = 0;
 
             // @todo make this configurable
