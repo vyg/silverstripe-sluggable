@@ -1,41 +1,41 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace Suilven\Sluggable\Tests;
 
-use SilverStripe\CMS\Model\SiteTree;
-use SilverStripe\Core\Config\Config;
-use SilverStripe\Core\Injector\Injector;
-use SilverStripe\Core\Kernel;
-use SilverStripe\Core\Startup\ScheduledFlushDiscoverer;
 use SilverStripe\Dev\SapphireTest;
-use Suilven\Sluggable\Extension\Sluggable;
 use Suilven\Sluggable\Helper\SluggableHelper;
 
 class SluggableHelperTest extends SapphireTest
 {
 
-    public function test_lower_case()
+    public function testLowerCase(): void
     {
         $this->assertEquals('this-is-lower-case', $this->getSlug('this is lower case'));
     }
 
-    public function test_upper_case()
+
+    public function testUpperCase(): void
     {
         $this->assertEquals('this-is-upper-case', $this->getSlug('THIS IS UPPER CASE'));
     }
 
-    public function text_mixed_case()
+
+    public function testMixedCase(): void
     {
         $this->assertEquals('this-is-mixed-case', $this->getSlug('THIs-Is-Mixed-case'));
     }
 
-    public function test_empty_string()
+
+    public function testEmptyString(): void
     {
         $this->assertEquals('', $this->getSlug(''));
     }
 
-    private function getSlug($title)
+
+    private function getSlug(string $title): string
     {
         $helper = new SluggableHelper();
+
         return $helper->getSlug($title);
     }
 }

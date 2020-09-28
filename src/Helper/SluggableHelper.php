@@ -1,11 +1,7 @@
-<?php
-
+<?php declare(strict_types = 1);
 
 namespace Suilven\Sluggable\Helper;
 
-
-use SilverStripe\Core\Config\Config_ForClass;
-use SilverStripe\ORM\DataExtension;
 use SilverStripe\View\Parsers\URLSegmentFilter;
 
 class SluggableHelper
@@ -13,15 +9,17 @@ class SluggableHelper
     /**
      * Convert the configured field and it's associated value into a slug
      * e.g. Liverpool Football Club => liverpool-football-club
+     *
+     * @param string $fieldValue The value of the field
+     * @return string field value sluggified
      */
-    public function getSlug($fieldValue)
+    public function getSlug(string $fieldValue): string
     {
 
         // use the standard SilverStripe tool for slugging URLs.  This optionally may have a different transliterator
         // associated with it
         $slugger = new URLSegmentFilter();
 
-        /** @var string $slug */
         return $slugger->filter($fieldValue);
     }
 }

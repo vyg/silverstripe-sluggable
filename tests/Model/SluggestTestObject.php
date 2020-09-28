@@ -1,8 +1,6 @@
-<?php
-
+<?php declare(strict_types = 1);
 
 namespace Suilven\Sluggable\Tests\Model;
-
 
 use SilverStripe\Dev\TestOnly;
 use SilverStripe\ORM\DataObject;
@@ -13,7 +11,7 @@ class SluggestTestObject extends DataObject implements TestOnly
     private static $table_name = 'Test_SluggableObject';
 
     private static $db= [
-      'DisplayName' => 'Varchar'
+      'DisplayName' => 'Varchar',
     ];
 
     private static $extensions = [
@@ -21,5 +19,4 @@ class SluggestTestObject extends DataObject implements TestOnly
     ];
 
     private static $slug = 'DisplayName';
-
 }
