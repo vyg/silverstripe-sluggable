@@ -43,11 +43,10 @@ class Sluggable extends DataExtension
 
         /** @var string $slug */
         $slug = $helper->getSlug($fieldValue);
-
         $count = $this->getOwner()->get()->filter([$fieldName => $fieldValue])->count();
 
         if ($count >= 1) {
-            $i = 0;
+            $i = 1;
 
             // @todo make this configurable
             while ($i < 1000) {
@@ -57,7 +56,7 @@ class Sluggable extends DataExtension
                 $slugToSave = $slug . $suffix;
 
                 $existing = $this->getOwner()->get()->filter(['Slug' => $slugToSave])->first();
-                if (isset($existing)) {
+                if (!isset($existing)) {
                     $this->getOwner()->Slug = $slugToSave;
 
                     break;
