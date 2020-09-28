@@ -46,7 +46,7 @@ class Sluggable extends DataExtension
         $count = $this->getOwner()->get()->filter([$fieldName => $fieldValue])->count();
 
         if ($count >= 1) {
-            $i = 1;
+            $i = 0;
 
             // @todo make this configurable
             while ($i < 1000) {
