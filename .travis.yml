@@ -1,16 +1,19 @@
 language: php
 dist: bionic
+services:
+  - mysql
+  - postgresql
 cache:
     directories:
         - $HOME/.composer/cache/files
 env:
     global:
-        - COMPOSER_ROOT_VERSION=4.0.x-dev
+        - COMPOSER_ROOT_VERSION=4.x-dev
 matrix:
     include:
         -
             php: 7.4
-            env: 'DB=PGSQL INSTALLER_VERSION=4.1.x-dev PHPUNIT_TEST=1'
+            env: 'DB=PGSQL INSTALLER_VERSION=4.5.x-dev PHPUNIT_TEST=1'
         -
             php: 7.1
             env: 'DB=MYSQL INSTALLER_VERSION=4.2.x-dev PHPUNIT_COVERAGE_TEST=1'
@@ -32,11 +35,23 @@ matrix:
         -
             php: 7.4
             env: PHPSTAN_TEST=1
+before_install:
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS travis_ci_test;'
+  - psql -c 'create database travis_ci_test;' -U postgres
+
 before_script:
     - 'phpenv rehash'
     - 'phpenv config-rm xdebug.ini'
     - 'composer validate'
     - 'echo $INSTALLER_VERSION'
+    - 'export UNIT_TESTING_CONFIG_ENABLED=1'
+    - 'echo 'SS_BASE_URL="http://localhost"' > .env'
+    - 'echo 'SS_DATABASE_CLASS="MySQLPDODatabase"' >> .env'
+    - 'echo 'SS_DATABASE_NAME="travis_ci_test"' >> .env'
+    - 'echo 'SS_DATABASE_USERNAME="root"' >> .env'
+    - 'echo 'SS_DATABASE_PASSWORD=""' >> .env'
+    - 'echo 'SS_DATABASE_SERVER="localhost"' >> .env'
+
     - 'composer require --prefer-source --no-update silverstripe/recipe-cms:4.4.x-dev'
     - 'if [[ $DB == PGSQL ]]; then composer require --no-update silverstripe/postgresql:2.x-dev; fi'
     - 'composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile'
