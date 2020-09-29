@@ -49,7 +49,7 @@ before_script:
     - echo 'SS_DATABASE_CLASS="MySQLPDODatabase"' >> .env
     - echo 'SS_DATABASE_NAME="travis_ci_test"' >> .env
     - echo 'SS_DATABASE_USERNAME="root"' >> .env
-    - echo 'SS_DATABASE_PASSWORD=""' >> .env'
+    - echo 'SS_DATABASE_PASSWORD=""' >> .env
     - echo 'SS_DATABASE_SERVER="localhost"' >> .env
 
     - 'composer require --prefer-source --no-update silverstripe/recipe-cms:4.4.x-dev'
