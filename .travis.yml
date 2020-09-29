@@ -1,5 +1,5 @@
 language: php
-dist: trusty
+dist: bionic
 cache:
     directories:
         - $HOME/.composer/cache/files
@@ -9,10 +9,7 @@ env:
 matrix:
     include:
         -
-            php: 5.6
-            env: 'DB=MYSQL INSTALLER_VERSION=4.0.x-dev PHPCS_TEST=1 PHPUNIT_TEST=1'
-        -
-            php: !!float 7
+            php: 7.4
             env: 'DB=PGSQL INSTALLER_VERSION=4.1.x-dev PHPUNIT_TEST=1'
         -
             php: 7.1
