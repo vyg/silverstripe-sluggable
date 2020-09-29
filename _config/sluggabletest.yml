@@ -1,9 +1,11 @@
 ---
 Name: test-slugs
+Only:
+  envvarset:
+    - UNIT_TESTING_CONFIG_ENABLED
 ---
 
 Suilven\Sluggable\Tests\Model\SluggableTestObject:
   extensions:
     - Suilven\Sluggable\Extension\Sluggable
   slug: DisplayName
-
