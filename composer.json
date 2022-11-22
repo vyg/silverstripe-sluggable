@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "~7.1",
+        "php": "~8",
         "silverstripe/recipe-cms": "4.x-dev"
     },
     "require-dev": {
