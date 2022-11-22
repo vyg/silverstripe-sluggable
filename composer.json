@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "~8",
-        "silverstripe/recipe-cms": "4.x-dev"
+        "silverstripe/recipe-cms": "~4.11"
     },
     "require-dev": {
         "php-parallel-lint/php-console-highlighter": "^0.5.0",
